@@ -1,0 +1,35 @@
+{
+
+  "description": "This extension help persons with Visual Impairments to Detect Phishing sites",
+  "manifest_version": 2,
+  "name": "PhiDMA",
+  "version": "0.1",
+  "icons": {
+    "48": "icons/phishing.png"
+  },
+
+  
+ "permissions": ["activeTab", "http://*/*", "https://*/*","downloads","tabs","http://127.0.0.1:5000/"],
+
+"browser_action": {
+    "default_icon": "icons/phishing.png",
+    "default_title": "PhiDMA"
+  },
+"commands": {
+  "_execute_browser_action": {
+    "suggested_key": {
+      "default": "Ctrl+Shift+U",
+      "windows": "Ctrl+Shift+U",
+      "mac": "Command+Shift+U",
+      "chromeos": "Ctrl+Shift+U",
+      "linux": "Ctrl+Shift+U"
+    }
+  }
+},
+
+   "background": {
+    "scripts": ["breakPhiDMa.js"]
+  },
+  "web_accessible_resources": ["start.mp3"]
+
+}
